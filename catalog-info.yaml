@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: f51zsz8ul-nodejs-gitops
+  description: This is GitOps manifest for f51zsz8ul-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: f51zsz8ul-nodejs
+    janus-idp.io/tekton: f51zsz8ul-nodejs 
+    backstage.io/kubernetes-id: f51zsz8ul-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:f51zsz8ul-nodejs
